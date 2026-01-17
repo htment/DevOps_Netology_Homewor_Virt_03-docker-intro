@@ -243,8 +243,10 @@ docker run -d --name debian-container -v $(pwd):/data debian:11 tail -f /dev/nul
 ### 4. Проверим, что контейнеры запущены
 ```
 docker ps
+```
 ![alt text](image-21.png)
 ### 5. Подключимся к первому контейнеру (centos) и создадим файл
+```
 docker exec centos-container bash -c "echo 'Hello from CentOS container' > /data/centos-file.txt"
 ```
 ### 6. Создадим файл на хостовой машине в текущем каталоге
